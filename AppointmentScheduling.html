@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        HealthLink 2035 – Smart Hospital Management System
+        AppointmentScheduling.html
+        Purpose: Allows staff to schedule appointments by linking
+                 a patient with a doctor at a specific date/time.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Scheduling – HealthLink 2035</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="brand-icon">🏥</span>
+            <span class="brand-text">HealthLink <span class="brand-year">2035</span></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/PatientRegistration.html">Register Patient</a></li>
+            <li><a href="/AppointmentScheduling.html" class="active">Appointments</a></li>
+            <li><a href="/VitalsEntry.html">Vitals</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>Schedule Appointment</h1>
+                <p>Book an appointment for a registered patient</p>
+            </div>
+
+            <!-- Appointment Scheduling Form -->
+            <form action="/ScheduleAppointment" method="POST"
+                  onsubmit="return validateAppointmentForm()">
+
+                <!-- Patient ID (Dropdown) -->
+                <div class="form-group">
+                    <label for="patientId">Select Patient</label>
+                    <select id="patientId" name="patientId" required>
+                        <option value="">-- Loading patients... --</option>
+                    </select>
+                </div>
+
+                <!-- Doctor ID (Dropdown) -->
+                <div class="form-group">
+                    <label for="doctorId">Select Doctor</label>
+                    <select id="doctorId" name="doctorId" required>
+                        <option value="">-- Loading doctors... --</option>
+                    </select>
+                </div>
+
+                <!-- Appointment Date -->
+                <div class="form-group">
+                    <label for="appointmentDate">Appointment Date</label>
+                    <input type="date" id="appointmentDate" name="appointmentDate" required>
+                </div>
+
+                <!-- Appointment Time -->
+                <div class="form-group">
+                    <label for="appointmentTime">Appointment Time</label>
+                    <input type="time" id="appointmentTime" name="appointmentTime" required>
+                </div>
+
+                <!-- Submit -->
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        Schedule Appointment
+                    </button>
+                    <button type="reset" class="btn btn-secondary">
+                        Clear Form
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2035 HealthLink Smart Hospital Management System. All rights reserved.</p>
+    </footer>
+
+    <!-- Validation Script -->
+    <script src="js/validation.js"></script>
+
+    <!-- Load dropdowns dynamically -->
+    <script>
+        // Fetch and populate Patient dropdown
+        fetch('/api/patients')
+            .then(r => r.json())
+            .then(patients => {
+                const sel = document.getElementById('patientId');
+                sel.innerHTML = '<option value="">-- Select Patient --</option>';
+                patients.forEach(p => {
+                    sel.innerHTML += `<option value="${p.patientId}">ID: ${p.patientId} – ${p.name}</option>`;
+                });
+            });
+
+        // Fetch and populate Doctor dropdown
+        fetch('/api/doctors')
+            .then(r => r.json())
+            .then(doctors => {
+                const sel = document.getElementById('doctorId');
+                sel.innerHTML = '<option value="">-- Select Doctor --</option>';
+                doctors.forEach(d => {
+                    sel.innerHTML += `<option value="${d.doctorId}">ID: ${d.doctorId} – ${d.name} (${d.specialization})</option>`;
+                });
+            });
+    </script>
+</body>
+</html>
+

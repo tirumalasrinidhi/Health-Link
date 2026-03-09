@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Role – HealthLink 2035</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .role-container {
+            max-width: 900px;
+            margin: 4rem auto;
+            text-align: center;
+        }
+        .role-header h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .role-header p {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+        }
+        .role-cards {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .role-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            width: 260px;
+            cursor: pointer;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid transparent;
+        }
+        .role-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            border-color: var(--primary);
+        }
+        .role-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+        .role-card h2 {
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+        .role-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body style="background-color: var(--bg-light);">
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="brand-icon">🏥</span>
+            <span class="brand-text">HealthLink <span class="brand-year">2035</span></span>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="role-container">
+            <div class="role-header">
+                <h1>Welcome to HealthLink</h1>
+                <p>Please select your role to access the system</p>
+            </div>
+            
+            <div class="role-cards">
+                <!-- Patient Role -->
+                <a href="patient-portal.html" class="role-card">
+                    <div class="role-icon">🧑‍⚕️</div>
+                    <h2>Patient</h2>
+                    <p>Register as a new patient or view your medical dashboard and vitals.</p>
+                </a>
+
+                <!-- Doctor Role -->
+                <a href="/doctor-schedule" class="role-card">
+                    <div class="role-icon">🩺</div>
+                    <h2>Doctor</h2>
+                    <p>View your appointment schedules and patient list for the day.</p>
+                </a>
+
+                <!-- Staff Role -->
+                <a href="/dashboard" class="role-card">
+                    <div class="role-icon">🏥</div>
+                    <h2>Hospital Staff</h2>
+                    <p>Manage scheduling, record patient vitals, and access system analytics.</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer" style="position: absolute; bottom: 0; width: 100%;">
+        <p>&copy; 2035 HealthLink Smart Hospital Management System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
