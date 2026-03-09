@@ -1,0 +1,140 @@
+{
+  "counters": {
+    "patientId": 8,
+    "doctorId": 4,
+    "appointmentId": 8,
+    "vitalId": 5
+  },
+  "doctors": [
+    {
+      "doctorId": 1,
+      "name": "Dr. Ananya Sharma",
+      "specialization": "Cardiology",
+      "phone": "9876543210",
+      "email": "ananya.sharma@healthlink.org"
+    },
+    {
+      "doctorId": 2,
+      "name": "Dr. Rajesh Verma",
+      "specialization": "General Medicine",
+      "phone": "9876543211",
+      "email": "rajesh.verma@healthlink.org"
+    },
+    {
+      "doctorId": 3,
+      "name": "Dr. Priya Nair",
+      "specialization": "Neurology",
+      "phone": "9876543212",
+      "email": "priya.nair@healthlink.org"
+    },
+    {
+      "doctorId": 4,
+      "name": "Dr. Suresh Patel",
+      "specialization": "Orthopedics",
+      "phone": "9876543213",
+      "email": "suresh.patel@healthlink.org"
+    }
+  ],
+  "patients": [
+    {
+      "patientId": 4,
+      "name": "John Doe",
+      "dob": "1990-01-01",
+      "gender": "Male",
+      "phone": "1234567890",
+      "address": "123 Main St, New York, NY 10001"
+    },
+    {
+      "patientId": 5,
+      "name": "hii",
+      "dob": "2209-12-20",
+      "gender": "Female",
+      "phone": "1234654367",
+      "address": "hyder"
+    },
+    {
+      "patientId": 6,
+      "name": "wertyu",
+      "dob": "2012-03-09",
+      "gender": "Male",
+      "phone": "9789789410",
+      "address": "hyde"
+    },
+    {
+      "patientId": 7,
+      "name": "siri",
+      "dob": "2009-02-10",
+      "gender": "Female",
+      "phone": "9789789410",
+      "address": "huderabad"
+    },
+    {
+      "patientId": 8,
+      "name": "Jame",
+      "dob": "2026-03-10",
+      "gender": "Male",
+      "phone": "1234567890",
+      "address": "hyd"
+    }
+  ],
+  "appointments": [
+    {
+      "appointmentId": 4,
+      "patientId": 4,
+      "doctorId": 2,
+      "appointmentDate": "2026-03-17",
+      "appointmentTime": "12:17",
+      "status": "Scheduled"
+    },
+    {
+      "appointmentId": 5,
+      "patientId": 4,
+      "doctorId": 2,
+      "appointmentDate": "2026-03-16",
+      "appointmentTime": "12:24",
+      "status": "Scheduled"
+    },
+    {
+      "appointmentId": 6,
+      "patientId": 5,
+      "doctorId": 1,
+      "appointmentDate": "2026-03-18",
+      "appointmentTime": "12:27",
+      "status": "Scheduled"
+    },
+    {
+      "appointmentId": 7,
+      "patientId": 7,
+      "doctorId": 2,
+      "appointmentDate": "2026-03-09",
+      "appointmentTime": "13:50",
+      "status": "Scheduled"
+    },
+    {
+      "appointmentId": 8,
+      "patientId": 8,
+      "doctorId": 1,
+      "appointmentDate": "2026-03-10",
+      "appointmentTime": "13:04",
+      "status": "Scheduled"
+    }
+  ],
+  "vitals": [
+    {
+      "vitalId": 4,
+      "patientId": 4,
+      "heartRate": 60,
+      "systolicBP": 90,
+      "temperature": 36.1,
+      "recordedDate": "2026-03-09T06:47:43.009Z"
+    },
+    {
+      "vitalId": 5,
+      "patientId": 5,
+      "heartRate": 60,
+      "systolicBP": 90,
+      "temperature": 36.1,
+      "recordedDate": "2026-03-09T06:54:54.043Z"
+    }
+  ]
+}
