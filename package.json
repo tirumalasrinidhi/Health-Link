@@ -1,0 +1,13 @@
+{
+  "name": "healthlink-2035",
+  "version": "1.0.0",
+  "description": "HealthLink 2035 – Smart Hospital Management System",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
